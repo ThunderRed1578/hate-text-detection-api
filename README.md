@@ -8,10 +8,9 @@ This is a reimplement of the project [hate-speech-detection](https://github.com/
 
 ### 1. Clone repository
 Open Command Prompt in the folder you want to clone the repository.  
-bash```
+```bash
 git clone https://github.com/ThunderRed1578/hate-text-detection-api.git
 cd hate-text-detection-api-main
-```
 
 ### 2. Create a conda virtual enviroment
 bash```
