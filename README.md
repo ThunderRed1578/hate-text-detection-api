@@ -1,3 +1,47 @@
+# HATE TEXT DETECTION PUBLIC API
+
+This is a reimplement of the project [hate-speech-detection](https://github.com/JensBender/hate-speech-detection) to a public API for 
+the use of our team project application to detect toxic comment.
+
+## I. Setup.
+
+### 1. Clone repository
+```bash
+git clone https://github.com/ThunderRed1578/hate-text-detection-api.git
+cd hate-text-detection-api-main
+```
+
+### 2. Create conda virtual enviroment to run the script
+```bash
+conda create -n ten-moi-truong python=3.8
+conda activate ten-moi-truong
+```
+
+### 3. Install neccessary packages
+```bash
+pip install -r requirements.txt
+```
+
+## II. Run the application
+
+### 1. Run the local API server
+This will open a port at `http://127.0.01:80`
+```bash
+python app.py
+```
+
+### 2. Port forwarding the local API server to public internet using ngrok service
+This will port forwarding the local port to a public url [actual-elf-closely.ngrok-free.app 80](https://actual-elf-closely.ngrok-free.app/)
+```bash
+ngrok http --url=actual-elf-closely.ngrok-free.app 80
+```
+
+## III. Using
+- Using the public url to call the api
+  - Example: https://actual-elf-closely.ngrok-free.app//api?comment=Christians are all demonic.
+
+---
+
 <!-- anchor tag for back-to-top links -->
 <a name="readme-top"></a>
 
@@ -356,5 +400,6 @@ Early stopping metric: Accuracy
 [HTML5-badge]: https://img.shields.io/badge/html5-%23E34F26.svg?style=for-the-badge&logo=html5&logoColor=white
 [CSS3-badge]: https://img.shields.io/badge/css3-%231572B6.svg?style=for-the-badge&logo=css3&logoColor=white
 # hate-text-detection-api
-#   h a t e - t e x t - d e t e c t i o n - a p i  
+#   h a t e - t e x t - d e t e c t i o n - a p i 
+ 
  
