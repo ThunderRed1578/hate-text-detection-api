@@ -8,46 +8,46 @@ This is a reimplement of the project [hate-speech-detection](https://github.com/
 
 ### 1. Clone repository
 Open Command Prompt in the folder you want to clone the repository.  
-```bash
+bash```
 git clone https://github.com/ThunderRed1578/hate-text-detection-api.git
 cd hate-text-detection-api-main
-```
+
 
 ### 2. Create a conda virtual enviroment
-```bash
+bash```
 conda create -n ten-moi-truong python=3.8
 conda activate ten-moi-truong
-```
+
 
 ### 3. Install necessary packages
-```bash
+bash```
 pip install -r requirements.txt
-```
+
 
 ## II. Run the Application
 
 ### 1. Run the local API server
 This will open a port at `http://127.0.0.1:80`  
 
-```bash
+bash```
 python app.py
-```
+
 
 ### 2. Port forwarding the local API server to public internet using ngrok service
 This will expose the local port to a public URL: `https://actual-elf-closely.ngrok-free.app`  
 
 In another Command Prompt:
 
-```bash
+bash```
 ngrok http --url=actual-elf-closely.ngrok-free.app 80
-```
+
 
 ## III. Using
 Using the public url to call the api  
   - Example: 
-```bash  
+bash```  
 https://actual-elf-closely.ngrok-free.app/api?comment=Your%20comment%20here
-```
+
 
 Replace `Your%20comment%20here` with your actual comment. Use URL encoding for special characters.
 
