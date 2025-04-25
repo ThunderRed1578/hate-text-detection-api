@@ -1,48 +1,55 @@
 # HATE TEXT DETECTION PUBLIC API
 
-This is a reimplement of the project [hate-speech-detection](https://github.com/JensBender/hate-speech-detection) to a public API for 
-the use of our team project application to detect toxic comment.  
+This is a reimplement of the project [hate-speech-detection](https://github.com/JensBender/hate-speech-detection) as a public API for our team project application to detect toxic comments.
 
 ---
 
 ## I. Setup.
 
 ### 1. Clone repository
+Open Command Prompt in the folder you want to clone the repository.  
 ```bash
 git clone https://github.com/ThunderRed1578/hate-text-detection-api.git
 cd hate-text-detection-api-main
 ```
 
-### 2. Create conda virtual enviroment to run the script
+### 2. Create a conda virtual enviroment
 ```bash
 conda create -n ten-moi-truong python=3.8
 conda activate ten-moi-truong
 ```
 
-### 3. Install neccessary packages
+### 3. Install necessary packages
 ```bash
 pip install -r requirements.txt
 ```
 
-## II. Run the application
+## II. Run the Application
 
 ### 1. Run the local API server
-This will open a port at `http://127.0.01:80`  
+This will open a port at `http://127.0.0.1:80`  
 
 ```bash
 python app.py
 ```
 
 ### 2. Port forwarding the local API server to public internet using ngrok service
-This will port forwarding the local port to a public url [actual-elf-closely.ngrok-free.app 80](https://actual-elf-closely.ngrok-free.app/)  
+This will expose the local port to a public URL: `https://actual-elf-closely.ngrok-free.app`  
+
+In another Command Prompt:
 
 ```bash
 ngrok http --url=actual-elf-closely.ngrok-free.app 80
 ```
 
 ## III. Using
-- Using the public url to call the api  
-  - Example: https://actual-elf-closely.ngrok-free.app//api?comment=Christians are all demonic.
+Using the public url to call the api  
+  - Example: 
+```bash  
+https://actual-elf-closely.ngrok-free.app/api?comment=Your%20comment%20here
+```
+
+Replace `Your%20comment%20here` with your actual comment. Use URL encoding for special characters.
 
 ---
 
